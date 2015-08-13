@@ -1,0 +1,48 @@
+two-way data binding
+
+template
+    normal HTML before compiling
+compiler
+    angular parses and processes the new markup from the template
+view
+    the loaded, transformed and rendered DOM
+directives
+    markups which apply special behavior to attributes or elements in the HTML
+    ng-app: automatically initialize the app
+    ng-model: store/update the value of the input field into/from a variable
+expression
+    markups in the double curly braces {{ expression | filter }}
+    javascript-like code snippet that allows to read and write variables
+model
+    variables stored in the scope
+filter
+    formating the value of an expression for display to the user
+live bindings
+    whenever the input values change, the value of the expressions are
+    automatically recaculated and the DOM is updated with their values
+
+adding UI logic: controllers
+
+controller
+    expose variables and functionality to expressions and directives
+    define a controller in *.js (module)
+        angular.module('app-name', []).controller('controller-name', function() {})
+    create a instance in *.html
+        ng-app="app-name" ng-controller="controller-name as inst-name"
+    data binding in *.html
+        ng-model="inst-name.var-name"
+
+view-independent business logic: services
+
+    services can be reused by other parts of the application as well
+    how does the controller get hold of the function in a service?
+    dependency injection: software design pattern
+        how objects and functions get created?
+        how they get hold of their dependencies?
+        a place where all the things that should work together are registered
+    everything within angular is created and wired using DI
+        directives, filters, controllers, services, ...
+    within angular, the DI container is called "injector"
+        ng-app="mod-name": the main module for the application
+        angular.module('mod-name', ['mod-name', ...]): dependent modules
+        ['service,...', function(service, ...){}]: injecting dependencies

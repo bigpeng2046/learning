@@ -1,0 +1,32 @@
+introduction
+    a structural framework for dynamic web apps
+        HTML as template language
+        HTML's syntax extention for app components
+        data binding
+        dependency injection
+    HTML shortages
+        a declarative language for static documents
+        no way to create dynamic applications
+    how to solve the impedance between static docs and dyna apps
+        libraries like jQuery, a collection of functions
+        frameworks, a particular implementation of a web app
+    the angual way -- creating new HTML constructs, like
+        data binding, as in {{}}
+        DOM control structures for repeating/hiding DOM fragments
+        forms support and form validation
+        event handling for DOM elements
+        grouping HTML fragments into reusable components
+    a complete client-side solution
+        build a CRUD app in a cohesive set
+            data-binding, basic templating directives, form validation
+            routing, deep-linking, reusable components, dependency injection
+        testability story
+            unit-testing, end-to-end testing, mocks, test harnesses
+            seed app with directory layout and test scripts as a starting point
+    pros and cons
+        built with CRUD app in mind
+        games and GUI editors are not good fit
+    the zen of angular: declarative better than imperative
+        decouple DOM manipulation from app logic: testability
+        decouple client side from server side
+        
