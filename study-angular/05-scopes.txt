@@ -1,0 +1,71 @@
+scopes
+
+what are scopes
+    an object that refers to the app model
+    an execution context for expressions
+    arranged in hierarchical structure which mimic the DOM
+    scopes watch expressions and propagate events
+
+characteristics
+    provide $watch to observe model mutations
+    provide $apply to propagate any model changes
+    can be nested to limit access to the properties of app components
+        child scopes, parent scopes, isolated scopes
+    provide context against which expressions are evaluated
+
+scope as data model
+    the glue between app controller and the view
+    the directives setup $watch expression during the template linking phase
+    the $watch notifies the the directive of property changes
+    the directive renders the updated value to the DOM
+    both controllers and directives have reference to the scope, but not to each other
+    the controller has no reference to the view for testing
+
+scope hierarchies
+    each angular app has exactly one root scope, but may have several child scopes
+    some directives create new child scopes
+    when new scopes are created, they are added as children of their parent scope
+    the hierarchy parallels the DOM where the scopes are attached
+    evaluation order for {{name}} is from current scope to the root scope
+
+events propagation
+    similar to DOM events propagation
+    the event can be broadcasted to the scope children
+    the event can be emitted to scope parents
+
+life cycle
+
+
+integration with the browser event loop
+    browser event loop
+        browser event-handling thread waits on the event queue for an event to arrive
+            an event is a user interaction, timer event, or network event
+        the event's callback gets executed
+            enters the javascript context
+            the callback can modify the DOM structure
+        once the callback executes
+            the browser leaves the javascript context
+            re-renders the view based on DOM changes
+    angular modifies the normal javascript flow into
+        classical execution context
+        angular execution context
+            data-binding
+            exception handling
+            property watching
+    use $apply to enter the angular execution context from javascript
+        in most places(controllers, servie), $apply has already been called by the directive
+        $apply is needed only when implementing custom event callbacks or
+            when working with third-party library callbacks
+    angular event loop
+        enter the angular exectution context by calling scope.$apply(simulusFn)
+        executes the simulusFn(), which typically modifies app state
+        angular enters the $digest loop until the model stabilizes
+            $evalAsync queue is empty
+            $watch list does not detect any changes
+        $evalAsync schedules work which
+            occur outside of current stack frame,
+            but before the browser's view render
+        $watch list is a set of expressions which
+            typically updates the DOM with the new value
+        the execution leaves the angular and javascript context
+        the browser re-renders the DOM to reflect any changes

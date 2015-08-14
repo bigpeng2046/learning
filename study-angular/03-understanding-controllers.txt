@@ -1,0 +1,31 @@
+understanding controllers
+
+a javascript constructor function to augment the scope
+attached to the DOM via the ng-controller directive
+    instantiate a new controller object
+    inject a new child scope $scope into the object
+
+use controllers to
+    set up the initial state of the $scope object
+    add behavior to the $scope object
+do not use controllers to
+    manipulate DOM: business logic only, avoiding presentation logic
+    format input: use angular form controls instead
+    filter output: use angular filters intead
+    share code or state across controllers: use angular services instead
+    manage the life-cycle of other components
+
+setting up the initial state of a $scope object
+    attach properties to the $scope object
+    the properties contain the view model
+    the properties are available to the template where the controller is registered
+
+adding behavior to a $scope object
+    in order to react to events or execute computation in the view
+    attach methods to the $scope object
+    these methods are then available to be called from the template/view
+
+scope inheritance
+    it is common to attach controllers at different levels of DOM hierarchy
+    get a hierachy of scopes because ng-controller creates a new child scope
+    have the right to access to properties and methods in higher-hierarchy $scope
