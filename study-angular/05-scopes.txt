@@ -69,3 +69,5 @@ integration with the browser event loop
             typically updates the DOM with the new value
         the execution leaves the angular and javascript context
         the browser re-renders the DOM to reflect any changes
+
+		
