@@ -1,0 +1,14 @@
+Command-Line Interface
+
+	install node.js and be able to invoke node and npm on your command line
+	install a git client and be able to invoke git on your command line
+	install cordova globally: npm install -g cordova
+	create the app
+		cordova create hello com.example.hello HelloWorld
+			hello: the directory for your project
+			com.example.hello: optionally, as java package names
+			HelloWorld: application's display title
+	add platforms
+		cd hello
+		cordova platform add android
+	

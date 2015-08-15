@@ -1,0 +1,16 @@
+Apache Cordova
+	an open-source mobile development framework
+	use standard web technologies: HMTL5, CSS3, and JavaScript
+	avoid each mobile platform's native development language
+	apps execute within wrappers targeted to each platform
+	standards-compliant API bindings to access each device's sensors, data, and network status
+	
+	does not provide any UI widgets or MV frameworks
+	provides only the runtime in which those can execute
+	
+Basic Components
+	config.xml: adheres to the W3C's packaged web app(widget) specification
+	index.html in WebView within the native application wrapper
+	plugin interface: invoke native code from javascript
+	
+	
