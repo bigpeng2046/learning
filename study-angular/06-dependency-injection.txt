@@ -1,0 +1,32 @@
+dependency injection
+    a software design pattern
+    how components get hold of their dependencies
+
+angular injector subsystem in charge of
+    createing components
+    resolving their dependencies
+    providing them to other components as requested
+
+factory methods
+    to define a directive, service, or filter
+    are registered with modules
+
+module methods
+    config method runs at configuration time for a module
+    run method runs at run time for a module
+    they are injectable with dependencies just like factory methods
+
+controllers
+    similarity to classes or constructor functions
+    providing the application behavior
+    supporting the declarative markup in the template
+    using the array notation to declare controllers
+    many instances of the same type of controller in an app
+
+dependency annotation
+    annotate parameters to inject them into functions
+    three ways of annotating your code
+        inline array annotation(preferred)
+        $inject property annotation
+        implicitly from the function parameter names
+        

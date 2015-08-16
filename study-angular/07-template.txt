@@ -1,0 +1,14 @@
+template
+    HTML that contains angular-specific elements and attributes
+    combines the template with info from model and controller to
+        render the dynamic view in the browser
+
+types of angular elements and attributes
+    directive
+        augments an existing DOM element
+        represents a reusable DOM component
+    markup
+        double curly brace notation {{}}
+        bind expressions to elements
+    filter: formats data for display
+    form controls: validates user input

@@ -1,0 +1,28 @@
+angular expressions
+    javascript-like code snippets placed in bindings such as {{expr}}
+    likes 1+2, a+b, user.name, items[index]
+
+differences with javascript expressions
+    context: evaluated against a scope object rather than the global window
+    forgiving: to undefined and null, or to generate ReferenceError
+    no control flow statements: conditionals, loops, or exceptions
+    no function declarations: cannot declare functions, even inside ng-init
+    no RegExp creation with literal notation
+    no comma and void operators
+    filters: to format data before displaying it
+
+to run more complex javascript code
+    make it a controller method and call it from the view
+    use the $eval() method
+
+context
+    angular uses $parse service to evalate expressions
+    angular exprs cannot access global variables like window, document or location
+    use services like $window and $location instead
+
+forgiving
+    to undefined and null, and used for data binding
+    make more sense to show nothing than to throw an exception
+
+$event
+    

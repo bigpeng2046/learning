@@ -1,0 +1,13 @@
+<html>
+<head>
+    <script type="text/javascript" src="../lib/angular.min.js"></script>
+    <script type="text/javascript" src="../js/08-context.js"></script>
+</head>
+<body ng-app="expressionExample">
+<div class="example2" ng-controller="ExampleController">
+  Name: <input ng-model="name" type="text"/>
+  <button ng-click="greet()">Greet</button>
+  <button ng-click="window.alert('Should not see me')">Won't greet</button>
+</div>
+</body>
+</html>
