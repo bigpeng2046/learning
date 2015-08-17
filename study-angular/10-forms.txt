@@ -1,0 +1,4 @@
+forms
+    a collection of controls to group related controls together
+    controls(iput, select, textarea) are ways for a user to enter data
+    provide client-side validation services to enhance user experience

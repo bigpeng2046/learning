@@ -1,0 +1,14 @@
+<html>
+<head>
+    <script type="text/javascript" src="../lib/angular.min.js"></script>
+    <script type="text/javascript" src="../js/09-stateful-filter.js"></script>
+</head>
+<body ng-app="myStatefulFilterApp">
+<div ng-controller="MyController">
+  Input: <input ng-model="greeting" type="text"><br>
+  Decoration: <input ng-model="decoration.symbol" type="text"><br>
+  No filter: {{greeting}}<br>
+  Decorated: {{greeting | decorate}}<br>
+</div>
+</body>
+</html>

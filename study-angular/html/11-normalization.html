@@ -1,0 +1,18 @@
+<html>
+<head>
+    <script type="text/javascript" src="../lib/angular.min.js"></script>
+    <script type="text/javascript" src="../js/11-normalization.js"></script>
+</head>
+<body ng-app="docsBindExample">
+
+<div ng-controller="Controller">
+  Hello <input ng-model='name'> <hr/>
+  <span ng-bind="name"></span> <br/>
+  <span ng:bind="name"></span> <br/>
+  <span ng_bind="name"></span> <br/>
+  <span data-ng-bind="name"></span> <br/>
+  <span x-ng-bind="name"></span> <br/>
+</div>
+
+</body>
+</html>

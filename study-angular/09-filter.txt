@@ -1,0 +1,25 @@
+filter
+    formats the value of an expression for display to the user
+    used in view templates, controllers or services
+    it is easy to define your own filter
+
+using filters in view templates
+    {{ expression | filter }}
+    {{ expression | filter1 | filter2 | ... }}
+    {{ expression | filter:arg1:arg2:... }}
+
+using filters in controllers, services, and directives
+    inject a dependency with the name <filterName>Filter
+    the injected argument is a function like: filterFunc(theValue, theParam)
+
+creating custom filters
+    register a new filter factory function with your module
+    return a new filter function
+        the first argument is the input value
+        the additional arguments as parameters
+    the filter function should be a pure function: stateless and idempotent
+
+stateful filters
+    strongly discouraged because it cannot be optimized
+    mark the filter as $stateful
+    

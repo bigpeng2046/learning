@@ -1,0 +1,24 @@
+what are directives?
+    markers on a DOM element(attribute, element name, comment or CSS class)
+    attach a specified behavior to the DOM element
+    event transform the DOM element and its children
+    by angularJS's HTML compiler($compile)
+
+built-in directives
+    ngBind, ngModel, ngClass, ...
+
+matching directives
+    how $compile determines when to use a given directive
+    refer to directives by their case-sensitive camelCase normalized name(e.g. ngModel)
+    the normalization process
+        1. strip x- and data- from the front of the element/attributes
+        2. convert the :, -, or _-delimited name to camelCase
+    matches attribute name, tag name, class names, or class name
+
+creating directives
+    directives are registered on modules:
+        module.directive(directiveName, factoryFunction() {})
+    an object with options returned by the function to tell $compile
+        how the directive should behave when matched
+    the function is invoked only once when matched for the first time
+    the function is invoked using $injector.invoke
