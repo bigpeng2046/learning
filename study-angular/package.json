@@ -1,0 +1,19 @@
+{
+  "name": "study-angular",
+  "version": "1.0.0",
+  "description": "learning angular for myself",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.4.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "angular",
+    "learning"
+  ],
+  "author": "xiwen, peng",
+  "license": "ISC"
+}

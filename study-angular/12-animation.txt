@@ -1,0 +1,7 @@
+animation
+    completely based on CSS classes
+    animation hooks for common directives such as ngRepeat, ngSwitch, and ngView
+        set in place to trigger animation during the directive's life cycle
+        perform a CSS transition, CSS keyframe animation, or javacript callback animation
+        use vanilla CSS by following the naming conventions
+    custom directives via the $animate service

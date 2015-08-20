@@ -1,0 +1,16 @@
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../css/12-ng-class.css">
+    <script type="text/javascript" src="../lib/angular.min.js"></script>
+</head>
+<body ng-app>
+
+<p>
+  <input type="button" value="set" ng-click="myCssVar='css-class'">
+  <input type="button" value="clear" ng-click="myCssVar=''">
+  <br>
+  <span ng-class="myCssVar">CSS-Animated Text</span>
+</p>
+
+</body>
+</html>
