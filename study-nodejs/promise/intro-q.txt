@@ -1,0 +1,13 @@
+http://documentup.com/kriskowal/q/
+
+promise
+
+	an object represents the return value or the thrown exception 
+	that the function may eventually provide
+	
+	can be used as a proxy for a remote object to overcome latency
+	
+	mitigate the "Pyramid of Doom" by flattening the pyramid
+	
+	
+	
