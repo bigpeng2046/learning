@@ -1,0 +1,17 @@
+{
+  "name": "Message Passing",
+  "version": "0.0.1",
+  "description": "Show message passing in chrome extension",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "js": ["page.js"]
+    }
+  ],
+  "browser_action": {
+    "default_title": "Send a message to the page",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}
