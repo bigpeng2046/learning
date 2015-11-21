@@ -46,7 +46,7 @@ function clearLog() {
 }
 
 function connect_to_server() {
-	connect("ws://" + loginResp["host"] + ":" + loginResp["port"]);
+	connect("ws://" + loginResp["Hosts"] + ":" + loginResp["Port"]);
 }
 
 var webSocket;
@@ -56,8 +56,8 @@ var connect = function(address){
 
 	webSocket.onopen = function(e) {
 		log("Connection open...");
-		if (loginResp["id"])
-			send("set:" + loginResp["id"]);
+		if (loginResp["ClientId"])
+			send("SET-CREDENTIAL MIQI/1.0\r\nClientId:" + loginResp["ClientId"]+"\r\n");
 		disconnect();
 	};
 
